@@ -4,4 +4,13 @@
  * and open the template in the editor.
  */
 
+function recupMontantImposition(revenue){
+    let imposition = 0;
+    const tranche1 = 10777;
+    
+    if (revenue <= tranche1){
+        imposition = 0
+    }
+    return imposition;
+}
 
