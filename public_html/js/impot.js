@@ -7,10 +7,15 @@
 function recupMontantImposition(revenue){
     let imposition = 0;
     const tranche1 = 10777;
+    const tranche2 = 27478;
     
     if (revenue <= tranche1){
-        imposition = 0
+        return 0;
     }
-    return imposition;
+    else if (revenue <= tranche2){
+        imposition = 0.11;
+        revenue = revenue-tranche1;
+    }
+    return (revenue*imposition).toFixed(2);
 }
 
